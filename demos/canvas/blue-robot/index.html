@@ -7,7 +7,7 @@
   body { height: 200px; position: relative; margin: 8px; }
   .buttons { position: absolute; bottom: 0px; left: 0px; margin: 4px; }
 </style>
-<canvas width="380" height="200"></canvas>
+<canvas width="280" height="100"></canvas>
 <script>
  var Landscape = function (context, width, height) {
    this.offset = 0;
@@ -42,7 +42,7 @@
      context.fillStyle = 'white';
      context.textAlign = 'left';
      context.textBaseline = 'top';
-     context.font = '20px sans-serif';
+     context.font = '30px sans-serif';
      context.fillText('WHATWG ROCKS', 10, -30); // text up above canvas
      context.restore();
      // then, draw the background tree
@@ -134,9 +134,9 @@
  };
 </script>
 <script>
- var canvas = document.getElementsByTagName('canvas')[0];
- var context = canvas.getContext('2d');
- var landscape = new Landscape(context, canvas.width, canvas.height);
+ var Canvas = document.getElementsByTagName('canvas')[0];
+ var Context = canvas.getContext('2d');
+ var landScape = new Landscape(context, canvas.width, canvas.height);
  var blueRobot = new BlueRobot();
  // paint when the browser wants us to, using requestAnimationFrame()
  function paint() {
